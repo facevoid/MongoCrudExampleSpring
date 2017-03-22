@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Welcome to the VW Advert Aggregator check your phrases :)</title>
+</head>
+<body>
+
+<div sec:authorize="isAuthenticated()">
+    <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+</div>
+
+<!--<p th:text="'id: ' + ${username.getUsername()}" />-->
+
+<h1>Welcome to the VW Advert Aggregator :)</h1>
+
+<p>Click <a th:href="@{/phrase}">here</a> to see change your search phrases.</p>
+
+<p>Click <a th:href="@{/advert}">here</a> to see the latest adverts which match your search phrases.</p>
+</body>
+</html>

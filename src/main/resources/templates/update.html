@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MongoDB/Spring Boot tutorial from tests4geeks.com</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-spacing: 0px;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="/updated" method="POST">
+    Make <input type="text" id="make" name="make" placeholder="" th:text="${car.make}"/><br />
+    Model <input type="text" id="model" name="model" /><br />
+    Year <input type="text" id="year" name="year" /><br />
+    Description <textarea rows="5" cols="70" id="description" name="description" /><br />
+    <input type="submit" />
+</form>
+
+</body>
+</html>
